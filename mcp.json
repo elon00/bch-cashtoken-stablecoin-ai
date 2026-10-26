@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "bch-cashtoken-stablecoin-ai": {
+      "command": "cargo",
+      "args": [
+        "run",
+        "--release",
+        "--quiet"
+      ],
+      "env": {
+        "RUST_LOG": "info",
+        "HACKATHON_TRACK": "Bitcoin Cash",
+        "PROJECT_TICKER": "BCHUSD"
+      },
+      "tools": [
+        {
+          "name": "verify_bchusd_invariants",
+          "description": "Verifies deterministic invariants for BCH CashToken Stablecoin AI on Bitcoin Cash."
+        },
+        {
+          "name": "execute_bchusd_action",
+          "description": "Executes authenticated Stablecoin state transition."
+        }
+      ]
+    }
+  }
+}
